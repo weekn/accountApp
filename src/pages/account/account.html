@@ -8,7 +8,7 @@
           </button>
         </ion-col>
         <ion-col col-8>
-          <button>
+          <button appButton [ngStyle]="backgroundStyle">
           添加预算
         </button>
         </ion-col>
@@ -21,3 +21,22 @@
     </ion-grid>
 
 </ion-header>
+<ion-content>
+  <ion-grid text-center>
+      <ion-row style="height: 20px;background-color: #efeeee;font-size:7px">
+          <ion-col>9月收入</ion-col><ion-col>9月支出</ion-col>
+      </ion-row>
+      <ion-row style="height: 40px;background-color: #0feeee;">
+          <ion-col>0.00</ion-col><ion-col>100.00</ion-col>
+      </ion-row>
+  </ion-grid>
+
+  <div style="height:50px;width:50px;background-color: #ef0eee;font-size:7px;margin:0 auto;"></div>
+<div [ngClass]="borderClass">{{address.province}}</div>
+<input #myInput type="text" [(ngModel)]="message"/>
+<button (click)="onClick($event, myInput.value)">点击</button>
+<ion-scroll scrollbar-y ="true"  direction="y" style="background-color: #efeeee;">
+	hahahah<div style="height: 1500px;">dsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadsasaddddddtttttttttt
+  fdsfffffffffffffffffffffffffffffffffffffffffff</div>
+</ion-scroll>
+</ion-content>
