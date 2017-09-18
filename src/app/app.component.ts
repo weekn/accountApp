@@ -18,6 +18,10 @@ export class MyApp {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
+      console.log('-------------------myapp----ready-------------------------');
+      console.log('Width: ' + platform.width());
+      console.log('Height: ' + platform.height());
+
       statusBar.styleDefault();
       splashScreen.hide();
     });

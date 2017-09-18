@@ -1,42 +1,58 @@
-<ion-header>
+<ion-header >
 
-    <ion-grid text-center>
-      <ion-row>
-        <ion-col col-2>
-          <button class='button'>
-          <ion-icon name="heart"></ion-icon>
-          </button>
-        </ion-col>
-        <ion-col col-8>
-          <button appButton [ngStyle]="backgroundStyle">
-          添加预算
-        </button>
-        </ion-col>
-
-        <ion-col col-2>
-          <button><ion-icon name="heart"></ion-icon></button>
-        </ion-col>
-
-      </ion-row>
-    </ion-grid>
-
+  <ion-toolbar >
+    <ion-buttons start >
+      <button ion-button icon-only color="royal" >
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title text-center>添加预算</ion-title>
+    <ion-buttons end >
+      <button ion-button icon-only color="royal" >
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-grid text-center>
-      <ion-row style="height: 20px;background-color: #efeeee;font-size:7px">
-          <ion-col>9月收入</ion-col><ion-col>9月支出</ion-col>
+
+<ion-content #label  >
+  <ion-grid text-center style="height: 18%">
+      <ion-row style="height: 40%;background-color: #efeeee;font-size:1.1rem">
+          <ion-col >9月收入</ion-col><ion-col>9月支出</ion-col>
       </ion-row>
-      <ion-row style="height: 40px;background-color: #0feeee;">
+      <ion-row style="height: 60%;background-color: #1feeee;font-size:2.1rem">
           <ion-col>0.00</ion-col><ion-col>100.00</ion-col>
       </ion-row>
   </ion-grid>
 
-  <div style="height:50px;width:50px;background-color: #ef0eee;font-size:7px;margin:0 auto;"></div>
-<div [ngClass]="borderClass">{{address.province}}</div>
-<input #myInput type="text" [(ngModel)]="message"/>
-<button (click)="onClick($event, myInput.value)">点击</button>
-<ion-scroll scrollbar-y ="true"  direction="y" style="background-color: #efeeee;">
-	hahahah<div style="height: 1500px;">dsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadsasaddddddtttttttttt
-  fdsfffffffffffffffffffffffffffffffffffffffffff</div>
+
+  <div style="height:15%;width:30%;background-color: #ef1eee;left:35%;position:absolute;top:10%;z-index:999">
+    <ion-buttons>
+      <button (click)="doRecord()" class='go_record'>
+        
+       <!--  <img src= "/assets/go_record.gif">--></button> 
+    </ion-buttons>
+
+  </div>
+
+
+<ion-scroll  scrollbar-y =false  style="height:100%;background-color: #ef0eee;">
+	  <ion-grid style="height:100%">
+        <ion-row  class='data_info' >
+            <ion-col>1</ion-col>
+        </ion-row >
+        <ion-row  class='data_info' >
+            <ion-col>1</ion-col>
+        </ion-row >
+        <ion-row  class='data_info' >
+            <ion-col  class='date' >8日</ion-col>
+            <ion-col  class='info'>-48.00</ion-col>
+        </ion-row >
+        <ion-row  class='detail_info' >
+            <ion-col></ion-col>
+            <ion-col>餐饮5.00</ion-col>
+        </ion-row>
+    </ion-grid>
+    
 </ion-scroll>
 </ion-content>

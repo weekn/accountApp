@@ -1,3 +1,12 @@
-<ion-tabs>
-  <ion-tab *ngFor="let tabRoot of tabRoots" [root]="tabRoot.root" tabTitle="{{tabRoot.tabTitle}}" tabIcon="{{tabRoot.tabIcon}}"></ion-tab>
+<ion-tabs  tabbarPlacement="bottom" class='cc' >
+  <!-- <ion-tab *ngFor="let tabRoot of tabRoots" 
+  [root]="tabRoot.root" 
+  tabTitle="{{tabRoot.tabTitle}}" 
+  tabIcon="{{tabRoot.tabIcon}}">
+  	
+  </ion-tab> -->
+
+  	<ion-tab tabIcon="create" [root]="accountPage" tabTitle="记账" tabBadge="3" tabBadgeStyle="danger"></ion-tab>
+    <ion-tab tabIcon="navigate" [root]="reportPage" tabTitle="报表" tabBadge="14" tabBadgeStyle="danger"></ion-tab>
+    <ion-tab tabIcon="person" [root]="settingPage" tabTitle="设置" ></ion-tab>
 </ion-tabs>

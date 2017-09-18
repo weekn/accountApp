@@ -1,0 +1,24 @@
+page-record {
+	.scroll-content {
+   	 overflow: hidden;
+  	};
+
+  	.account_type{
+  		
+  		display: flex;
+  		flex-direction:row ;
+  		flex-wrap:wrap;
+  		justify-content:space-around;
+  		align-items:baseline;
+		align-content:flex-start;
+
+  	}
+  	.account_type div{
+  		width:6rem;
+  		height:6rem;
+  		background-color: grey;
+  		margin-left:0.25rem;
+  		margin-right:0.25rem;
+  		margin-top:0.4rem;
+  	}
+}

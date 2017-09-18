@@ -41,7 +41,6 @@ $colors: (
   dark:       #222
 );
 
-
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
@@ -53,7 +52,27 @@ $colors: (
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
+$toolbar-order-md:( 
+	title-middle: 1, 
+	buttons-start: 0, 
+	buttons-end: 3, 
+	 );
+$toolbar-md-title-font-size:1.3rem;
+$button-round-border-radius:2rem;
+$toolbar-md-height:4.5rem;
 
+//tab--------------------------------------------------
+$tabs-md-tab-min-height:4.5rem;
+$tabs-md-tab-font-size:0.9rem;
+$tabs-md-tab-font-size-active:0.9rem;
+$tabs-md-tab-icon-size:2.1rem;
+
+//segment---------------------------------------------
+$segment-button-md-text-color-activated: #f53d3d;
+$segment-button-md-border-color-activated:#f53d3d;
+/*$segment-button-md-opacity-disabled:0.5;
+$segment-button-md-opacity:0;
+$segment-button-md-opacity-activated:1;*/
 
 
 // App Windows Variables

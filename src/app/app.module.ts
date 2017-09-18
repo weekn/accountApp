@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { SettingPage } from '../pages/setting/setting';
 import { AccountPage } from '../pages/account/account';
 import { ReportPage } from '../pages/report/report';
+import { RecordPage } from '../pages/record/record';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +23,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     AccountPage,
     ReportPage,
-    SettingPage
+    SettingPage,
+    RecordPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     LoginPage,
     AccountPage,
     ReportPage,
-    SettingPage
+    SettingPage,
+    RecordPage
   ],
   providers: [
     StatusBar,

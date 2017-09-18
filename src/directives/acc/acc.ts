@@ -18,9 +18,9 @@ export class AccDirective {
 
 
   ngAfterViewInit() {
-    alert('ff');
-    this.renderer2.setStyle(this.er.nativeElement, 'background-color', 'blue');
-    this.renderer2.addClass(this.er.nativeElement, 'btn');
+    // alert('ff');
+    // this.renderer2.setStyle(this.er.nativeElement, 'background-color', 'blue');
+    // this.renderer2.addClass(this.er.nativeElement, 'btn');
 
   }
 
