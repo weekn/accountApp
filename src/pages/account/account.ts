@@ -23,6 +23,7 @@ export class AccountPage implements AfterViewInit{
   @ViewChild("headerV")
   private el_header:ElementRef;
 
+  go_account_src="../assets/images/go_record_acticve.gif";
   constructor(public navCtrl: NavController, public navParams: NavParams,public modalCtrl: ModalController) {
   }
   name = 'Semlinker';

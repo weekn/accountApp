@@ -25187,12 +25187,6 @@ page-account .scroll-content {
   overflow: hidden;
 }
 
-page-account .go_record {
-  background-image: url("assets/go_record.gif");
-  width: 80px;
-  height: 80px;
-}
-
 page-account .data_info {
   font-size: 1.3rem;
   height: 10%;
