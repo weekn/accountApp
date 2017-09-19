@@ -1,4 +1,4 @@
-import { Component ,NgModule,ViewChild,AfterViewInit,ElementRef} from '@angular/core';
+import { Component ,NgModule,ViewChild,AfterViewInit,DoCheck,ElementRef} from '@angular/core';
 import { IonicPage, NavController, NavParams,ModalController } from 'ionic-angular';
 import {FormsModule} from "@angular/forms";
 import {Platform} from 'ionic-angular';
@@ -16,21 +16,24 @@ import { RecordPage } from '../record/record';
   //styleUrls: ['account.scss'],
 })
 
-export class AccountPage implements AfterViewInit{
+export class AccountPage implements AfterViewInit,DoCheck{
   @ViewChild("label")
   private el:ElementRef;
 
   @ViewChild("headerV")
   private el_header:ElementRef;
 
-  go_account_src="../assets/images/go_record_acticve.gif";
+  // go_account_src="../assets/images/go_record_acticve.gif";
+  // go_account_inactive_src="../assets/images/go_record.gif";
+  go_record_isactive=false;
+  refresher:any;
+  debug='haha';
+  entry={type:'餐饮',cost:'10.00',describe:'真的好贵啊'};
+  record=[{'1':[this.entry,this.entry],'2':[this.entry]}
+  ];
   constructor(public navCtrl: NavController, public navParams: NavParams,public modalCtrl: ModalController) {
   }
-  name = 'Semlinker';
-  address = {
-    province: '福建',
-    city: '厦门'
-  }
+
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad AccountPage');
@@ -48,9 +51,32 @@ export class AccountPage implements AfterViewInit{
     // console.log('headWidth: ' +this.el_header['_elementRef'].nativeElement.clientWidth);
     // console.log('headWidth: ' +this.el_header['_elementRef'].nativeElement.clientHeight);
   }
+   ngDoCheck() {
+        if(this.refresher){
+
+          if(this.refresher.progress==0){
+            this.go_record_isactive=false;
+            
+          }
+        }
+
+    }
+  
   doRecord(){
       let profileModal = this.modalCtrl.create(RecordPage, { userId: 8675309 });
       profileModal.present();
+  }
+  items = [];
+  doRefresh(refresher) {
+    console.log('Begin async operation', refresher);
+    let profileModal = this.modalCtrl.create(RecordPage, { userId: 8675309 });
+    profileModal.present();
+    refresher.complete();
+  }
+
+  doRefreshStart(refresher) {
+      this.refresher=refresher;
+      this.go_record_isactive=true;
   }
 
 

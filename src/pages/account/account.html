@@ -13,9 +13,6 @@
       </button>
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
-
-<ion-content #label  >
   <ion-grid text-center style="height: 18%">
       <ion-row style="height: 40%;background-color: #efeeee;font-size:1.1rem">
           <ion-col >9月收入</ion-col><ion-col>9月支出</ion-col>
@@ -25,19 +22,30 @@
       </ion-row>
   </ion-grid>
 
-
-  <div style="height:15%;width:30%;background-color: #ef1eee;left:35%;position:absolute;top:10%;z-index:999">
+  <div style="height:15%;width:30%;background-color: #ef1eee;left:35%;position:absolute;top:77%;z-index:999">
     <ion-buttons>
-      <button (click)="doRecord()" >
-        <img src="{{go_account_src}}" >
+      <button (click)="doRecord()" style='background:transparent'>
+        <!-- <imgs src="{{go_account_src}}" on-mouseover='over()'> -->
+        <img [src]="{true:'../assets/images/go_record_acticve.gif',false:'../assets/images/go_record.gif'}[go_record_isactive]" 
+        on-mouseover='over()'>
       </button>
         
     </ion-buttons>
 
   </div>
+</ion-header>
+
+<ion-content #label  >
+ 
+  
 
 
-<ion-scroll  scrollbar-y =false  style="height:100%;background-color: #ef0eee;">
+<ion-scroll  style="height:100%;background-color: #ef0eee;">
+  <!-- crollbar-y =false -->
+    <ion-refresher pullMin=60 pullMax=227 (ionRefresh)="doRefresh($event)" (ionStart)="doRefreshStart($event)">
+    </ion-refresher>
+
+
 	  <ion-grid style="height:100%">
         <ion-row  class='data_info' >
             <ion-col>1</ion-col>
@@ -46,12 +54,19 @@
             <ion-col>1</ion-col>
         </ion-row >
         <ion-row  class='data_info' >
+            <ion-col>{{debug}}</ion-col>
+        </ion-row >
+        <ion-row  class='data_info' >
             <ion-col  class='date' >8日</ion-col>
             <ion-col  class='info'>-48.00</ion-col>
         </ion-row >
         <ion-row  class='detail_info' >
-            <ion-col></ion-col>
-            <ion-col>餐饮5.00</ion-col>
+            <ion-col >1</ion-col>
+            <ion-col  style='background-color: pink'>
+              <ion-row>餐饮22.00</ion-row>
+              <ion-row class='describe' >真的好贵！</ion-row>
+            
+            </ion-col>
         </ion-row>
     </ion-grid>
     

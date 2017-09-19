@@ -40,4 +40,11 @@ page-account {
   	font-size:1.5rem;
   	background-color: silver
   }
+
+  .detail_info .describe{
+    font-size:1.1rem;
+    text-overflow: ellipsis;    
+    overflow: hidden; 
+    white-space: nowrap; 
+  }
 }
