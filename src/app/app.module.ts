@@ -15,6 +15,9 @@ import { RecordPage } from '../pages/record/record';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+//-------------------------------------------native-----------------------
+import { FileOpener } from '@ionic-native/file-opener';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -44,6 +47,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    FileOpener,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
